@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'" />
+  <title>EduPanel Docente</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">EduPanel<span>DOCENTE</span></div>
+    <select id="inst" aria-label="Institución"></select>
+    <div class="top-actions">
+      <span id="aiStatus" class="ai-status"></span>
+      <button id="help" class="icon" title="Ayuda y preguntas frecuentes" aria-label="Ayuda">?</button>
+      <button id="theme" class="icon" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+      <button id="avatar" class="avatar" title="Mi perfil" aria-label="Mi perfil">U</button>
+    </div>
+  </header>
+  <nav class="tabs" id="tabs">
+    <button data-tab="registrar">Registrar</button>
+    <button data-tab="planear">Planear</button>
+    <button data-tab="crear">Crear con IA</button>
+  </nav>
+  <main id="view"></main>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="lock" hidden></div>
+  <script src="about.config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
