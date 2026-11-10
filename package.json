@@ -1,0 +1,39 @@
+{
+  "name": "edupanel-docente",
+  "version": "0.2.0",
+  "description": "Asistente docente con IA (tu propia API key)",
+  "main": "main.js",
+  "author": "Michael Sevilla",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis",
+    "test": "node tests/run.js"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.0.0",
+    "jsdom": "^30.1.3"
+  },
+  "build": {
+    "appId": "com.mike.edupaneldocente",
+    "productName": "EduPanel Docente",
+    "files": [
+      "main.js",
+      "preload.js",
+      "security.js",
+      "src/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "artifactName": "Instalar-EduPanel-Docente.exe"
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}
